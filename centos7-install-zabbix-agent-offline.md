@@ -25,6 +25,7 @@ systemctl start zabbix-agent
 
 
 Ansible脚本：
+```shell
 server_ip=10.10.10.2
 agent_ip=10.10.10.10
 ansible all -m shell -a 'rpm -Uvh https://repo.zabbix.com/zabbix/4.2/rhel/7/x86_64/zabbix-release-4.2-1.el7.noarch.rpm'
@@ -34,3 +35,4 @@ ansible all -m shell -a "sed -i 's/ServerActive=127.0.0.1/ServerActive=${server_
 ansible local -m shell -a "sed -i 's/Hostname=.*/Hostname=${agent_ip}/';"
 ansible local -m shell -a "systemctl enable zabbix-agent"
 ansible local -m shell -a "systemctl start zabbix-agent"
+```

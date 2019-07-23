@@ -2,21 +2,21 @@
 
 因工作中需要用到 Postgresql ，但对 Postgresql 又不太熟悉，因此记录一下，方便以后对照使用。
 
-mysql                                   |postgresql                           |note
-----------------------------------------|-------------------------------------|--------------------------
-mysql -u user -h host -P 3306 dbname -p | psql -U user -h host -p 5432 dbname | connect database command
-SHOW DATABASES;                         | \l                                  |
-USE db-name;                            | \c db-name                          |
-SHOW TABLES;                            | \dt                                 |
-SELECT * FROM table-name;               | select * from table-name;           |
-DESC table-name;                        | \d table-name                       |
-SHOW PROCESSLIST;                       | SELECT * FROM pg_stat_activity;     |
-SELECT now()\G                          | \x  # 打开和关闭类似\G功能             |
-SOURCE /path.sql                        | \i /path.sql                        |
-LOAD DATA INFILE ...                    | \copy ...                           |
-\h                                      | \?                                  | help
-exit or quit                            | \q                                  |
-
+mysql                                      |postgresql                                 |note
+-------------------------------------------|-------------------------------------------|--------------------------
+mysql -u user -h host -P 3306 dbname -p    | psql -U user -h host -p 5432 dbname       | connect database command
+SHOW DATABASES;                            | \l                                        |
+USE db-name;                               | \c db-name                                |
+SHOW TABLES;                               | \dt                                       |
+SELECT * FROM table-name;                  | select * from table-name;                 |
+DESC table-name;                           | \d table-name                             |
+SHOW PROCESSLIST;                          | SELECT * FROM pg_stat_activity;           |
+SELECT now()\G                             | \x  # 打开和关闭类似\G功能                   |
+SOURCE /path.sql                           | \i /path.sql                              |
+LOAD DATA INFILE ...                       | \copy ...                                 |
+\h                                         | \?                                        | help
+exit or quit                               | \q                                        |
+   
 
 
 

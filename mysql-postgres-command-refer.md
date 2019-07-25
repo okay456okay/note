@@ -12,6 +12,7 @@ SELECT * FROM table-name;                  | select * from table-name;          
 DESC table-name;                           | \d table-name                             |
 SHOW PROCESSLIST;                          | SELECT * FROM pg_stat_activity;           |
 SELECT now()\G                             | \x  # 打开和关闭类似\G功能                   |
+SELECT * from table-name limit 5;          | SELECT * from table-name limit 5;         |
 SOURCE /path.sql                           | \i /path.sql                              |
 LOAD DATA INFILE ...                       | \copy ...                                 |
 \h                                         | \?                                        | help
